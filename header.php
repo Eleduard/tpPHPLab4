@@ -34,7 +34,13 @@
     <script src="js/html5shiv.js"></script>
     <![endif]-->
     <script src='js/device.min.js'></script>
-    <?php include 'conexion.php'; ?>
+    <?php 
+    include 'conexion.php'; 
+    $conn = conexion();
+    $idEmpresa = $_GET["id"];
+    $sqlEmpresa = "SELECT * FROM empresa WHERE id='$idEmpresa'";
+    $empresa = $conn->query($sqlEmpresa)->fetch_assoc();
+    ?>
   </head>
   <body>
   <div class="page">
@@ -45,15 +51,15 @@
       <div class="container top-sect">
         <div class="navbar-header">
           <h1 class="navbar-brand">
-            <a data-type='rd-navbar-brand'  href="./"><small>MARTINEZ <br>CONSULTORES</small></a>
+            <a data-type='rd-navbar-brand'  href="./"><small><?php echo $empresa["denominacion"] ?></small></a>
           </h1>
           <a class="search-form_toggle" href="#"></a>
         </div>
 
         <div class="help-box text-right">
           <p>Telefono</p>
-          <a href="callto:#">800-2345-6789</a>
-          <small><span>Horario:</span>  6am-4pm PST M-Th; &nbsp;6am-3pm PST Fri</small>
+          <a href="callto:#"><?php echo $empresa["telefono"] ?></a>
+          <small><span>Horario:</span><?php echo $empresa["horario_atencion"] ?></small>
         </div>
       </div>
      
@@ -66,7 +72,7 @@
 					  <a href="home.html">INICIO</a>
 					</li>
 					<li style="list-style: none;">
-					  <a href="./">LISTA EMPRESAS</a>
+					  <a href="index.php">LISTA EMPRESAS</a>
 					</li>
 				  </ul>                           
 				</div>

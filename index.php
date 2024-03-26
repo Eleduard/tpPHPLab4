@@ -80,7 +80,7 @@
                   <td class="table-bordered"><?php echo $row["telefono"] ?></td>
                   <td class="table-bordered"><?php echo $row["email"] ?></td>
                   <td class="table-bordered"><?php echo $row["horario_atencion"] ?></td>
-                  <td ><a href="eliminar.php?id=<?php echo $row['id'] ?>">Eliminar</a></td>
+                  <td ><a href="eliminarEmpresa.php?id=<?php echo $row['id'] ?>">Eliminar</a></td>
               </tr>
               <?php
                 }

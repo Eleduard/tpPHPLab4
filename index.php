@@ -1,3 +1,15 @@
+<!--
+id
+denominacion
+quienes_somos
+domicilio
+telefono
+email
+horario_atencion
+latitud
+longitud
+-->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -63,11 +75,7 @@
         <div>  
           <table class="table">
             <thead>
-                <th class="table-bordered">Id</th>
-                <th class="table-bordered">Título</th>
-                <th class="table-bordered">Resumen</th>
-                <th class="table-bordered">Publicada</th>
-                <th class="table-bordered">Fecha public.</th>
+                <th class="table-bordered">Nombre de empresa</th>
             </thead>
             <tbody>
             <?php
@@ -75,11 +83,7 @@
             ?>
               <tr>
                   <td class="table-bordered"><a href="home.php?id=<?php echo $row['id'] ?>"><?php echo $row["denominacion"] ?></a></td>
-                  <td class="table-bordered"><?php echo $row["quienes_somos"] ?></td>
-                  <td class="table-bordered"><?php echo $row["domicilio"] ?></td>
-                  <td class="table-bordered"><?php echo $row["telefono"] ?></td>
-                  <td class="table-bordered"><?php echo $row["email"] ?></td>
-                  <td class="table-bordered"><?php echo $row["horario_atencion"] ?></td>
+                  <td ><a href="formularioEmpresa.php?id=<?php echo $row['id'] ?>">Actualizar</a></td>
                   <td ><a href="eliminarEmpresa.php?id=<?php echo $row['id'] ?>">Eliminar</a></td>
               </tr>
               <?php

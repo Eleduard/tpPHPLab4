@@ -22,7 +22,7 @@
               <div class="camera_caption fadeIn">
                 <div class="jumbotron jumbotron1">
                   <em>
-                  <a href="detalle.php?id=<?php echo $row['id'] ?>" class="btn-link fa-angle-right"><?php echo $row['titulo_noticia'] ?></a>
+                  <a href="detalle.php?id=<?php echo $idEmpresa ?>&noticia=<?php echo $row['id']?>" class="btn-link fa-angle-right"><?php echo $row['titulo_noticia'] ?></a>
                   </em>
                   <div class="wrap">
                     <p>

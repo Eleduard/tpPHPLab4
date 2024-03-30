@@ -1,5 +1,5 @@
 <?php include 'header.php';
-$id = $_GET['id']; 
+$id = $_GET['noticia']; 
 $conn = conexion();
 $sql = "SELECT * FROM noticia WHERE id='$id'";
 if($conn != null) {

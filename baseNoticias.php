@@ -1,9 +1,15 @@
 <?php 
-include "header.php"; 
+include "header.php";
+$conn = conexion(); 
+$idEmpresa;
+$sql;
 
-$conn = conexion();
-$sql = "SELECT * FROM noticia";
+if(isset($_GET['id'])) {
+    $idEmpresa = $_GET['id'];
+}
+
 if($conn != null) {
+    $sql = "SELECT * FROM noticia WHERE id_empresa=$idEmpresa";
     $resultado = $conn->query($sql);
 }
 if($resultado->num_rows > 0) {

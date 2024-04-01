@@ -16,36 +16,33 @@ $registro = $resultado->fetch_assoc();
       <section class="well well4">
 		
         <div class="container">
-			<center>
-				<div id="imagenPrincipal" style="height: 450px; background-image: url('http://localhost:82/template_html/images/page-1_slide1.jpg?1583775512626'); background-repeat: no-repeat;background-size: cover;">
-					<div style="text-align:left; background-color: rgba(1,1,1,0.5);color: #ffffff;font-size: 16px;line-height: 50px;">
-					 <?php $registro['id'] ?>                       
-					</div>
-				</div>
-			</center>
-		  <h2>
+          <center>
+            <div id="imagenPrincipal" style="height: 450px; background-image: url('http://localhost:82/template_html/images/page-1_slide1.jpg?1583775512626'); background-repeat: no-repeat;background-size: cover;">
+              <div style="text-align:left; background-color: rgba(1,1,1,0.5);color: #ffffff;font-size: 16px;line-height: 50px;">
+              <?php $registro['id'] ?>                       
+              </div>
+            </div>
+          </center>
+          <h2>
             <?php echo $registro['titulo_noticia']; ?>
           </h2>
-		  <?php echo $registro['fecha_publicacion']; ?>
-		  <hr>
+		      <?php echo $registro['fecha_publicacion']; ?>
+		      <hr>
           <div class="row offs2">
-            
             <div class="col-lg-12">
               <dl class="terms-list">
-                <dt>
-					<?php echo $registro['resumen_noticia']; ?>
-                </dt>
-				<hr>
-                <dd>
-					<?php echo $registro['contenido_html']; ?>
-				</dd>
+              <dt>
+					      <?php echo $registro['resumen_noticia']; ?>
+              </dt>    
+				  <hr>
+              <dd>
+					      <?php echo htmlspecialchars_decode($registro['contenido_html']); ?>
+				      </dd>
               </dl>
             </div>
           </div>
         </div>
       </section>   
-      
-
     </main>
 
     <!--========================================================

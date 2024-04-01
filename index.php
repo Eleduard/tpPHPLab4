@@ -84,6 +84,7 @@ longitud
               <tr>
                   <td class="table-bordered"><a href="home.php?id=<?php echo $row['id'] ?>"><?php echo $row["denominacion"] ?></a></td>
                   <td ><a href="formularioEmpresa.php?id=<?php echo $row['id'] ?>">Actualizar</a></td>
+                  <td ><a href="baseNoticias.php?id=<?php echo $row['id'] ?>">Editar noticias</a></td>
                   <td ><a href="eliminarEmpresa.php?id=<?php echo $row['id'] ?>">Eliminar</a></td>
               </tr>
               <?php

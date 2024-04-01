@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="format-detection" content="telephone=no"/>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <title id="tituloPestana"><?php echo $tituloPestana; ?><</title>
+    <title id="tituloPestana"><?php echo $tituloPestana; ?></title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -69,7 +69,7 @@
 				<div class="">  
 				  <ul class="nav navbar-nav sf-menu sf-js-enabled sf-arrows" data-type="navbar">
 					<li style="list-style: none;" class="active">
-					  <a href="home.html">INICIO</a>
+					  <a href="home.php?id=<?php echo $idEmpresa ?>">INICIO</a>
 					</li>
 					<li style="list-style: none;">
 					  <a href="index.php">LISTA EMPRESAS</a>

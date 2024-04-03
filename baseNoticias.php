@@ -27,7 +27,7 @@ if($resultado->num_rows > 0) {
     while($row = $resultado->fetch_assoc()) {
 ?>
                 <tr>
-                    <td class="table-bordered"><a href="tiny.php?id=<?php echo $row['id'] ?>"><?php echo $row["id"] ?></a></td>
+                    <td class="table-bordered"><a href="tiny.php?id=<?php echo $row['id'] ?>&idEmp=<?php echo $idEmpresa ?>"><?php echo $row["id"] ?></a></td>
                     <td class="table-bordered"><?php echo $row["titulo_noticia"] ?></td>
                     <td class="table-bordered"><?php echo $row["resumen_noticia"] ?></td>
                     <td class="table-bordered"><?php echo $row["publicada"] ?></td>
@@ -47,7 +47,7 @@ if($resultado->num_rows > 0) {
 }
 ?>
 
-        <button class="active" onclick="location.href='tiny.php'">Nueva noticia</button>
+        <button class="active" onclick="location.href='tiny.php?id=&idEmp=<?php echo $idEmpresa ?>'">Nueva noticia</button>
 
         <script>
             function cambiarTitulo(nuevoTitulo) {

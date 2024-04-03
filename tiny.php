@@ -73,7 +73,7 @@
 </head>
 <body>
   <?php include 'conexion.php';
-    if($_GET != null) {
+    if($_GET["id"] != null) {
       $id = $_GET['id'];
       $conn = conexion();
       $sql = "SELECT * FROM noticia WHERE id = " . $id;
@@ -94,6 +94,7 @@
       <form action="guardar.php" method="POST">
       <div>
         <input type="number" name="id" id="id" value="<?php echo $registro["id"]; ?>" style="display: none;">
+        <input type="number" name="idEmp" id="idEmp" value="<?php echo $_GET["idEmp"]; ?>" style="display: none;">
       </div>
       <table class="table">
         <tr>
